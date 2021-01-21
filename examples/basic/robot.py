@@ -14,6 +14,7 @@ class MyRobot(wpilib.IterativeRobot):
         self.motor = ctre.WPI_TalonSRX(1)  # Initialize the TalonSRX on device 1.
 
     def disabledPeriodic(self):
+        # Ensure the motor is disabled when the robot is disabled.
         self.motor.disable()
 
     def teleopPeriodic(self):
